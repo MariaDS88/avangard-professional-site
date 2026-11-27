@@ -83,6 +83,65 @@ input:focus,select:focus{outline:2px solid var(--gold);outline-offset:0}
 .ok{color:#1b7a3a}.err{color:var(--wine)}
 footer{background:var(--ink);color:rgba(255,255,255,.6);padding:30px 18px 100px;text-align:center;font-size:12px;letter-spacing:.04em}
 footer b{display:block;font:600 11px var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--gold2);margin-bottom:8px}
+
+.ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.ghost{background:transparent;color:var(--champ);border:1px solid rgba(201,162,77,.7);border-radius:999px;padding:14px 24px;font:600 12px var(--sans);letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+.ghost:hover{background:rgba(201,162,77,.14)}
+.tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;max-width:760px;margin:0 auto}
+.tier{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 2px 0 rgba(201,162,77,.12)}
+.tier .from{font:700 11px var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.tier h3{font-family:var(--serif);font-size:24px;line-height:1.15;margin:4px 0 6px}
+.tier p{font-size:13px;color:#5a6b69;margin-bottom:12px}
+.thumbs{display:flex;gap:8px;flex-wrap:wrap}
+.thumbs div{width:64px;height:64px;border-radius:10px;border:1px solid var(--line);background:radial-gradient(circle at 50% 40%,#fff,#f6efe0);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.thumbs img{max-width:100%;max-height:100%;object-fit:contain}
+#cartBar small{display:block;font-size:11px;color:var(--gold2);letter-spacing:.04em;margin-top:1px}
+.gbox{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;margin:14px 0}
+.gbox .gt{font-size:13px;margin-bottom:8px}
+.bar{height:6px;border-radius:6px;background:#efe6d0;overflow:hidden}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,#e9d6a6,#c9a24d)}
+.gopt{display:flex;align-items:center;gap:10px;padding:8px;border:1px solid var(--line);border-radius:10px;margin-top:8px;cursor:pointer;font-size:12.5px;line-height:1.3}
+.gopt.on{border-color:var(--gold);background:#fbf5e4}
+.gopt input{width:auto;accent-color:#0f4b47}
+.gopt .gi{width:44px;height:44px;flex:none;border-radius:8px;background:#f6efe0;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.gopt img{max-width:100%;max-height:100%;object-fit:contain}
+.line.gl{color:#7a5a12;background:#fbf5e4;border-radius:8px;padding:10px;margin-top:6px;border-bottom:0}
+#chatFab{position:fixed;right:14px;bottom:86px;z-index:25;background:var(--ink);color:var(--champ);border:1px solid var(--gold);border-radius:999px;padding:13px 18px;font:600 12px var(--sans);letter-spacing:.1em;text-transform:uppercase;cursor:pointer;box-shadow:0 12px 30px rgba(0,0,0,.35)}
+#chatFab:before{content:"\2726";color:var(--gold);margin-right:8px}
+#chat{position:fixed;right:14px;bottom:14px;width:380px;height:min(580px,calc(100vh - 28px));background:var(--ivory);border:1px solid var(--gold);border-radius:18px;box-shadow:0 20px 50px rgba(0,0,0,.4);z-index:40;display:none;flex-direction:column;overflow:hidden}
+#chat.open{display:flex}
+.ch-head{background:var(--ink);color:var(--champ);padding:14px 16px;display:flex;align-items:center;gap:10px}
+.ch-head div{flex:1}
+.ch-head b{display:block;font-family:var(--serif);font-size:20px}
+.ch-head small{font-size:11px;color:rgba(255,255,255,.65)}
+.ch-head button{background:none;border:0;color:var(--champ);font-size:26px;line-height:1;cursor:pointer}
+.ch-body{flex:1;overflow:auto;padding:14px;display:flex;flex-direction:column;gap:10px}
+.msg-b,.msg-u{max-width:92%;padding:10px 13px;border-radius:14px;font-size:13.5px;line-height:1.5}
+.msg-b{background:#fff;border:1px solid var(--line);align-self:flex-start}
+.msg-u{background:var(--teal);color:var(--champ);align-self:flex-end}
+.cset{margin-top:10px;border-top:1px dashed var(--line);padding-top:8px}
+.cset b{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--teal)}
+.cset ul{list-style:none;margin:6px 0;font-size:12px;color:#44514f}
+.cset li{padding:2px 0}
+.cset button,.qbtn{background:var(--teal);color:var(--champ);border:0;border-radius:10px;padding:9px 12px;font:600 11.5px var(--sans);letter-spacing:.06em;cursor:pointer;width:100%}
+.ch-chips{display:flex;gap:7px;flex-wrap:wrap;padding:0 14px 10px;max-height:104px;overflow:auto}
+.ch-chips button{border:1px solid var(--teal);background:#fff;color:var(--teal);border-radius:999px;padding:7px 12px;font:500 12px var(--sans);cursor:pointer}
+.ch-in{display:flex;gap:8px;padding:10px 14px 14px;border-top:1px solid var(--line)}
+.ch-in input{flex:1;padding:11px 12px;font-size:14px}
+.ch-in button{background:linear-gradient(135deg,#e9d6a6,#c9a24d);border:0;border-radius:10px;padding:0 16px;font-size:18px;cursor:pointer;color:#2a1d05}
+@media(max-width:520px){#chat{left:8px;right:8px;bottom:8px;width:auto;height:82vh}}
+.ask{max-width:520px;margin:26px auto 0;padding:16px 16px 14px;border:1px solid rgba(201,162,77,.45);border-radius:18px;background:rgba(255,255,255,.05);text-align:left}
+.ask label{display:block;font-family:var(--serif);font-size:22px;font-weight:600;color:var(--gold2);margin:0 0 2px}
+.ask p{font-size:13px;color:rgba(255,255,255,.75);margin-bottom:10px}
+.askrow{display:flex;gap:8px}
+.askrow input{flex:1;min-width:0;padding:12px 14px;border:1px solid rgba(201,162,77,.5);border-radius:12px;background:rgba(255,255,255,.95);font-size:15px}
+.askrow button{background:linear-gradient(135deg,#e9d6a6,#c9a24d);color:#2a1d05;border:0;border-radius:12px;padding:0 18px;font:600 12px var(--sans);letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
+.askchips{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}
+.askchips button{background:transparent;border:1px solid rgba(201,162,77,.5);color:var(--champ);border-radius:999px;padding:6px 12px;font:500 12px var(--sans);cursor:pointer}
+.askchips button:hover{background:rgba(201,162,77,.16)}
+#chatHint{position:fixed;right:14px;bottom:140px;z-index:25;max-width:230px;background:#fff;color:var(--ink);border:1px solid var(--gold);border-radius:14px 14px 4px 14px;padding:10px 28px 10px 12px;font-size:12.5px;line-height:1.4;box-shadow:0 10px 26px rgba(0,0,0,.25);display:none}
+#chatHint.on{display:block}
+#chatHint button{position:absolute;top:2px;right:6px;border:0;background:none;font-size:18px;color:#8a7a50;cursor:pointer}
 @media(max-width:520px){.hero h1{font-size:33px}h2{font-size:26px}.card .under b{font-size:36px}.p .ph{height:150px}}
 </style>
 </head>
@@ -95,7 +154,7 @@ footer b{display:block;font:600 11px var(--sans);letter-spacing:.3em;text-transf
     <span class="eyebrow">Новорічна пропозиція</span>
     <h1>Професійний догляд, який <em>варто подарувати собі</em></h1>
     <p class="lead">Професійна лінійка A_Avangard для волосся, обличчя, рук і тіла. Обери свій подарунок і отримай знижку на все замовлення.</p>
-    <button class="cta" id="heroBtn">Обрати подарунок</button>
+    <div class="ctas"><button class="cta" id="heroBtn">Обрати подарунок</button></div>
     <div class="trust"><span>Професійна лінійка</span><span>Доставка Новою поштою</span><span>Оплата при отриманні</span></div>
   </header>
   <section class="gift wrap" id="gift">
@@ -103,10 +162,19 @@ footer b{display:block;font:600 11px var(--sans);letter-spacing:.3em;text-transf
     <p class="sub">Протри пальцем одну з трьох скриньок і дізнайся, яку знижку подарує тобі Avangard.</p>
     <div class="cards" id="cards"></div>
     <div class="note" id="giftNote"></div>
+    <form class="ask" id="askForm">
+      <label for="askText">Не знаєш, що обрати?</label>
+      <p>Опиши, що турбує або цікавить, і я покажу, що найкраще підійде саме тобі.</p>
+      <div class="askrow"><input id="askText" placeholder="Наприклад: випадає волосся" autocomplete="off"><button type="submit">Підібрати</button></div>
+      <div class="askchips" id="askChips"></div>
+    </form>
   </section>
 </div>
 
 <main>
+  <section id="bonus"><div class="wrap">
+    <div class="tiers" id="tiers"></div>
+  </div></section>
   <section id="topics"><div class="wrap">
     <h2>Що тобі потрібно?</h2>
     <p class="sub">Обери напрям, і я покажу, що є в наявності.</p>
@@ -120,12 +188,21 @@ footer b{display:block;font:600 11px var(--sans);letter-spacing:.3em;text-transf
   Пропозиція діє, поки є залишки. Відправлення по Україні Новою поштою, оплата при отриманні.
 </footer>
 
+<div id="chatHint">Опиши, що турбує, і я підберу догляд <button type="button" id="hintClose" aria-label="Закрити">&times;</button></div>
+<button id="chatFab">Підібрати догляд</button>
+<div id="chat" role="dialog" aria-label="Асистент підбору догляду">
+  <div class="ch-head"><div><b>Асистент підбору</b><small>Напиши, що турбує, і я зберу набір</small></div><button id="chatClose" aria-label="Закрити">&times;</button></div>
+  <div class="ch-body" id="chatBody"></div>
+  <div class="ch-chips" id="chatChips"></div>
+  <form class="ch-in" id="chatForm"><input id="chatText" placeholder="Наприклад: випадає волосся" autocomplete="off"><button type="submit" aria-label="Надіслати">&rarr;</button></form>
+</div>
 <div id="cartBar"><span id="barText"></span><button id="openCart">Оформити</button></div>
 
 <div id="drawer"><div class="box">
   <div style="display:flex;justify-content:space-between;align-items:center">
     <h2>Твоє замовлення</h2><button class="btn sec" id="closeCart">Закрити</button>
   </div>
+  <div id="giftBox"></div>
   <div id="lines"></div>
   <div class="tot" id="tot"></div>
   <form id="form" novalidate>
@@ -147,6 +224,13 @@ var CONFIG = {
   gift: 5,                       // знижка для всіх, %
   webhookUrl: "https://vps-25daaac0.vps.ovh.net/webhook/avangard-order",                // URL вебхука n8n, куди йдуть замовлення
   productsUrl: "https://vps-25daaac0.vps.ovh.net/webhook/avangard-products",               // необов'язково: JSON із залишками (Google Sheet через n8n)
+  chatUrl: "",                   // необов'язково: URL AI-вебхука n8n (поки працює вбудований підбір)
+  offer: {                       // пропозиція в кошику: товари зі знижкою від певної суми замовлення
+    from: 1500,                  // сума замовлення (без цих товарів), від якої пропозиція відкривається
+    percent: 50,                 // знижка на ці товари, %
+    max: 2,                      // скільки штук можна додати
+    ids: [89, 91, 93, 95, 97, 99] // лосьйони для тіла 125 мл (id з таблиці)
+  },
   telegram: "",                  // посилання на Telegram для питань, наприклад https://t.me/...
   bankPayment: { enabled: false, label: "Оплата за реквізитами", note: "" } // увімкнути, коли буде готово
 };
@@ -157,7 +241,12 @@ var TOPICS = [
   ["all","Усе"],["loss","Від випадіння"],["color","Блонд і фарбоване"],["hair","Догляд за волоссям"],
   ["hands","Руки і ноги"],["face","Обличчя"],["body","Тіло"],["kids","Діти"],["intim","Інтимна гігієна"]
 ];
-var topic = "all", cart = {}, discount = 0;
+var topic = "all", cart = {}, discount = 0, offer = {}, keepOpen = false;
+var GIFT_NAMES = {89:'Лосьйон для тіла "French breeze", 125 мл',91:'Лосьйон для тіла "Fresh lime", 125 мл',93:'Лосьйон для тіла "Elegant silk", 125 мл',95:'Лосьйон для тіла "Perfume composition", 125 мл',97:'Лосьйон для тіла "Flower melody", 125 мл',99:'Лосьйон для тіла "Aroma therapy", 125 мл',63:'Крем для рук з обліпихою та імбиром, 100 мл',65:'Крем для рук з ароматом вишні, 100 мл',67:'Аква-флюїд для рук, вівсяне молочко з шоколадом, 100 мл'};
+function giftLabel(p){return GIFT_NAMES[p.id]||p.name}
+function offerPrice(p){return Math.round(p.price*(1-CONFIG.offer.percent/100))}
+function offerCount(){var n=0;Object.keys(offer).forEach(function(k){n+=offer[k]});return n}
+function saveOffer(){store("av_offer",JSON.stringify(offer))}
 var $ = function(id){return document.getElementById(id)};
 function money(n){return Math.round(n).toLocaleString("uk-UA")+" ₴"}
 function store(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){}return null}
@@ -240,7 +329,8 @@ function renderChips(){
 }
 function render(){
   var g=$("grid");g.innerHTML="";
-  PRODUCTS.filter(function(p){return topic==="all"||p.topic===topic}).forEach(function(p){
+  var ord={};TOPICS.forEach(function(x,i){ord[x[0]]=i});
+  PRODUCTS.map(function(p,i){return[p,i]}).filter(function(a){return topic==="all"||a[0].topic===topic}).sort(function(a,b){return (ord[a[0].topic]||99)-(ord[b[0].topic]||99)||a[1]-b[1]}).map(function(a){return a[0]}).forEach(function(p){
     var left=p.stock-(cart[p.id]||0);
     var el=document.createElement("div");el.className="p";
     var pr=discount?'<div class="price">'+money(p.price*(1-discount/100))+'</div><div class="meta old">'+money(p.price)+' без знижки</div>':'<div class="price">'+money(p.price)+'</div>';
@@ -257,16 +347,45 @@ function render(){
 function byId(id){return PRODUCTS.filter(function(p){return p.id==id})[0]}
 function add(id,d){
   var p=byId(id);if(!p)return;var q=(cart[id]||0)+d;
-  if(q<=0)delete cart[id];else if(q<=p.stock)cart[id]=q;
+  if(q<=0)delete cart[id];else if(q<=p.stock-(offer[id]||0))cart[id]=q;
   store("av_cart",JSON.stringify(cart));render();updateBar();drawLines();
+}
+function offerOptions(){
+  return CONFIG.offer.ids.map(byId).filter(function(p){return p&&p.stock-(cart[p.id]||0)-(offer[p.id]||0)>=1});
 }
 function totals(){
   var sum=0,cnt=0;Object.keys(cart).forEach(function(id){var p=byId(id);if(p){sum+=p.price*cart[id];cnt+=cart[id];}});
-  var disc=Math.round(sum*discount/100);return{sum:sum,cnt:cnt,disc:disc,total:sum-disc};
+  var open=sum>=CONFIG.offer.from,osum=0,ocnt=0;
+  if(!open&&offerCount()){offer={};saveOffer()}
+  Object.keys(offer).forEach(function(id){var p=byId(id);if(!p||(cart[id]||0)+offer[id]>p.stock){delete offer[id];return}osum+=offerPrice(p)*offer[id];ocnt+=offer[id]});
+  var disc=Math.round(sum*discount/100);
+  return{sum:sum,cnt:cnt+ocnt,reg:cnt,disc:disc,osum:osum,ocnt:ocnt,open:open,total:sum-disc+osum};
 }
 function updateBar(){
-  var t=totals(),bar=$("cartBar");bar.style.display=t.cnt?"flex":"none";
-  $("barText").textContent="У кошику "+t.cnt+" шт, "+money(t.total);
+  var t=totals(),bar=$("cartBar"),h="";
+  bar.style.display=t.cnt?"flex":"none";
+  if(!t.open)h="ще "+money(CONFIG.offer.from-t.sum)+" до товару зі знижкою "+CONFIG.offer.percent+"%";
+  else if(t.ocnt<CONFIG.offer.max)h="товар зі знижкою "+CONFIG.offer.percent+"% відкрито";
+  $("barText").innerHTML="У кошику "+t.cnt+" шт, "+money(t.total)+(h?"<small>"+h+"</small>":"");
+}
+function addOffer(id,d){
+  var p=byId(id);if(!p)return;var q=(offer[id]||0)+d;
+  if(d>0&&(offerCount()>=CONFIG.offer.max||p.stock-(cart[id]||0)-(offer[id]||0)<1))return;
+  if(q<=0)delete offer[id];else offer[id]=q;
+  saveOffer();render();updateBar();drawLines();
+}
+function drawGiftBox(t){
+  var g=$("giftBox"),O=CONFIG.offer;
+  if(!t.reg){g.className="";g.innerHTML="";return}
+  var pct=Math.min(100,Math.round(t.sum/O.from*100));
+  var h='<div class="gt">'+(t.open?'<b>Обери товар зі знижкою '+O.percent+'%.</b> Додай до замовлення, до '+O.max+' шт.':'Ще '+money(O.from-t.sum)+' до товару зі знижкою '+O.percent+'% (від '+money(O.from)+').')+'</div><div class="bar"><i style="width:'+pct+'%"></i></div>';
+  if(t.open){
+    offerOptions().forEach(function(p){
+      h+='<div class="gopt"><span class="gi">'+(p.img?'<img alt="" src="'+p.img+'" onerror="this.remove()">':'')+'</span><span style="flex:1">'+giftLabel(p)+'<br><b>'+money(offerPrice(p))+'</b> <s style="color:#8a8a8a">'+money(p.price)+'</s></span><button type="button" class="btn" style="padding:9px 12px" data-id="'+p.id+'"'+(offerCount()>=O.max?' disabled':'')+'>Додати</button></div>';
+    });
+  }
+  g.className="gbox";g.innerHTML=h;
+  g.querySelectorAll("button").forEach(function(b){b.onclick=function(){addOffer(+b.getAttribute("data-id"),1)}});
 }
 function drawLines(){
   var L=$("lines");L.innerHTML="";
@@ -279,12 +398,21 @@ function drawLines(){
     L.appendChild(d);
   });
   var t=totals();
-  $("tot").innerHTML='<div><span>Сума</span><span>'+money(t.sum)+'</span></div>'+
-    (discount?'<div><span>Знижка '+discount+'%</span><span>-'+money(t.disc)+'</span></div>':'')+
-    '<div class="big"><span>До сплати</span><span>'+money(t.total)+'</span></div>';
-  if(!t.cnt)$("drawer").style.display="none";
+  Object.keys(offer).forEach(function(id){
+    var p=byId(id);if(!p)return;
+    var d=document.createElement("div");d.className="line gl";
+    d.innerHTML='<div style="flex:1"></div><div class="qty"><button>-</button><span>'+offer[id]+'</span><button>+</button></div><div style="min-width:64px;text-align:right">'+money(offerPrice(p)*offer[id])+'</div>';
+    d.firstChild.textContent=giftLabel(p)+" (-"+CONFIG.offer.percent+"%)";
+    var b=d.querySelectorAll("button");b[0].onclick=function(){addOffer(id,-1)};b[1].onclick=function(){addOffer(id,1)};
+    L.appendChild(d);
+  });
+  drawGiftBox(t);
+  $("tot").innerHTML=t.cnt?'<div><span>Сума</span><span>'+money(t.sum+t.osum)+'</span></div>'+
+    (discount?'<div><span>Знижка '+discount+'% на товари без акції 50%</span><span>-'+money(t.disc)+'</span></div>':'')+
+    '<div class="big"><span>До сплати</span><span>'+money(t.total)+'</span></div>':'';
+  if(!t.cnt&&!keepOpen)$("drawer").style.display="none";
 }
-$("openCart").onclick=function(){drawLines();$("drawer").style.display="block"};
+$("openCart").onclick=function(){keepOpen=false;$("msg").textContent="";drawLines();$("drawer").style.display="block"};
 $("closeCart").onclick=function(){$("drawer").style.display="none"};
 
 /* --- payment options --- */
@@ -302,10 +430,10 @@ $("form").addEventListener("submit",function(e){
   if(!data.name||!data.phone||!data.city||!data.branch){m.className="msg err";m.textContent="Заповни ім'я, телефон, місто і відділення.";return}
   if(data.phone.replace(/\D/g,"").length<10){m.className="msg err";m.textContent="Перевір номер телефону.";return}
   if(!CONFIG.webhookUrl){m.className="msg err";m.textContent="Тестовий режим: замовлення нікуди не відправлено, бо не підключено вебхук.";return}
-  var payload={order:data,discountPercent:discount,items:Object.keys(cart).map(function(id){var p=byId(id);return{id:p.id,name:p.name,price:p.price,qty:cart[id]}}),sum:t.sum,discount:t.disc,total:t.total,createdAt:new Date().toISOString()};
+  var payload={order:data,discountPercent:discount,items:Object.keys(cart).map(function(id){var p=byId(id);return{id:p.id,name:p.name,price:p.price,qty:cart[id]}}).concat(Object.keys(offer).map(function(id){var p=byId(id);return{id:p.id,name:giftLabel(p)+" (акція -"+CONFIG.offer.percent+"%)",price:offerPrice(p),qty:offer[id],offer:true}})),sum:t.sum+t.osum,discount:t.disc,total:t.total,createdAt:new Date().toISOString()};
   $("submitBtn").disabled=true;m.textContent="Відправляю...";
   fetch(CONFIG.webhookUrl,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)})
-    .then(function(r){if(!r.ok)throw 0;m.className="msg ok";m.textContent="Дякуємо! Замовлення прийнято, з тобою зв'яжуться для підтвердження.";cart={};store("av_cart","{}");updateBar();render();drawLines();f.reset();})
+    .then(function(r){if(!r.ok)throw 0;m.className="msg ok";m.textContent="Дякуємо! Замовлення прийнято, з тобою зв'яжуться для підтвердження.";keepOpen=true;cart={};store("av_cart","{}");offer={};saveOffer();updateBar();render();drawLines();f.reset();})
     .catch(function(){m.className="msg err";m.textContent="Не вдалося відправити. Спробуй ще раз"+(CONFIG.telegram?" або напиши нам у Telegram.":".");})
     .then(function(){$("submitBtn").disabled=false});
 });
@@ -356,11 +484,118 @@ $("heroBtn").onclick=function(){$("gift").scrollIntoView({behavior:"smooth"})};
     requestAnimationFrame(loop)})();
 })();
 
+/* --- bonus section --- */
+function renderBonus(){
+  var O=CONFIG.offer,w=$("tiers");w.innerHTML="";
+  var ps=O.ids.map(byId).filter(Boolean);
+  if(!ps.length){$("bonus").style.display="none";return}
+  var el=document.createElement("div");el.className="tier";el.style.textAlign="center";
+  el.innerHTML='<div class="from">від '+money(O.from)+'</div><h3>Товар за '+O.percent+'% вартості</h3><p style="margin:0">При замовленні від '+money(O.from)+' ти можеш отримати товар за '+O.percent+'% вартості. Який саме, покажемо в кошику.</p>';
+  w.appendChild(el);$("bonus").style.display="";
+}
+
+/* --- assistant --- */
+var SETS={
+  loss:{t:"Набір проти випадіння волосся",why:"Шампунь, бальзам і маска з лінійки для зміцнення та профілактики випадіння. Якщо випадіння сильне або раптове, краще показатися лікарю.",v:[{l:"100 мл",ids:[13,16,19]},{l:"250 мл",ids:[14,17,20]}]},
+  dark:{t:"Фарбоване волосся темних відтінків",why:"Шампунь і маска зі збереженням кольору. Спрей додає термозахист.",v:[{l:"100 мл",ids:[24,27]},{l:"250 мл",ids:[25,28]},{l:"250 мл і термоспрей",ids:[25,28,37]}]},
+  blond:{t:"Блонд і нейтралізація жовтизни",why:"Шампунь і маска, які нейтралізують жовтизну та дають сяйво освітленому волоссю.",v:[{l:"100 мл",ids:[30,33]},{l:"250 мл",ids:[31,34]},{l:"250 мл і термоспрей",ids:[31,34,36]}]},
+  repair:{t:"Відновлення волосся",why:"Шампунь і бальзам для щоденного догляду, колагеново-кератинова маска і спрей-олія для відновлення.",v:[{l:"Базовий: шампунь, бальзам, маска",ids:[2,5,9]},{l:"Повний: ще й спрей-олія",ids:[2,5,9,11]}]},
+  daily:{t:"Щоденний догляд за волоссям",why:"Шампунь для нормального і природного волосся та універсальний бальзам-кондиціонер.",v:[{l:"100 мл",ids:[1,4]},{l:"250 мл",ids:[2,5]}]},
+  acne:{t:"Догляд для проблемної шкіри обличчя",why:"Очищення, тонік, крем і нічна сироватка з лінії для проблемної та схильної до висипань шкіри.",v:[{l:"Мінімум: мус і крем",ids:[46,48]},{l:"Повний догляд",ids:[46,47,48,49]}]},
+  lift:{t:"Догляд за обличчям: ліфтинг",why:"Гель-пілінг для вмивання, тонік, денний і нічний крем лінії ліфтинг актив.",v:[{l:"Базовий: пілінг, денний і нічний крем",ids:[38,40,41]},{l:"З тоніком",ids:[38,39,40,41]}]},
+  hands:{t:"Догляд за руками",why:"Живильні креми для рук. Обирай аромат.",v:[{l:"Обліпиха та імбир, 100 мл",ids:[63]},{l:"Аромат вишні, 100 мл",ids:[65]},{l:"Аква-флюїд, вівсяне молочко з шоколадом, 100 мл",ids:[67]}]},
+  body:{t:"Догляд за тілом",why:"Лосьйони для тіла 250 мл: для чутливої та сухої шкіри або для схильної до подразнень.",v:[{l:'"French breeze" для чутливої та сухої, 250 мл',ids:[88]},{l:'"Elegant silk" для чутливої та сухої, 250 мл',ids:[92]},{l:'"Aroma therapy" для схильної до подразнень, 250 мл',ids:[98]}]}
+};
+var QUICK=[["Випадає волосся","loss"],["Фарбоване темне","dark"],["Блонд, жовтизна","blond"],["Сухе, пошкоджене","repair"],["Щоденний догляд","daily"],["Проблемна шкіра","acne"],["Ліфтинг обличчя","lift"],["Руки","hands"],["Тіло","body"],["Знижка 50%","gift"]];
+var RULES=[[/випад|тонк|рідк|слаб|облисі/,"loss"],[/блонд|жовт|освітл/,"blond"],[/фарб|колір|темн|брюнет|шатен/,"dark"],[/сух|пошкодж|ламк|січ|сіку|відновл|тьмян|пухн|кучер/,"repair"],[/акне|висип|прищ|проблемн|жирн/,"acne"],[/зморш|ліфтинг|антивік|вікові/,"lift"],[/рук|нігт|кутикул/,"hands"],[/тіл|лосьйон|подразн/,"body"],[/щоден|звичайн|нормальн|шампун|бальзам|волосс|волос/,"daily"]];
+function addMsg(html,who){var d=document.createElement("div");d.className=who==="u"?"msg-u":"msg-b";d.innerHTML=html;$("chatBody").appendChild(d);$("chatBody").scrollTop=$("chatBody").scrollHeight;return d}
+function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}
+function setPrice(ids){var s=0;ids.forEach(function(id){var p=byId(id);if(p)s+=p.price});return Math.round(s*(1-discount/100))}
+function showSet(key){
+  var S=SETS[key],h="<b>"+S.t+"</b><br>"+S.why;
+  var any=false;
+  S.v.forEach(function(v,vi){
+    var ps=v.ids.map(byId).filter(function(p){return p&&p.stock-(cart[p.id]||0)>=1});
+    if(ps.length!==v.ids.length)return;any=true;
+    h+='<div class="cset"><b>'+esc(v.l)+'</b><ul>'+ps.map(function(p){return"<li>"+esc(p.name)+"</li>"}).join("")+'</ul><button data-k="'+key+'" data-v="'+vi+'">Додати в кошик, '+money(setPrice(v.ids))+'</button></div>';
+  });
+  if(!any)h+="<br>Цього набору зараз немає в повному складі. Подивись окремі товари в каталозі.";
+  var d=addMsg(h,"b");
+  d.querySelectorAll("button").forEach(function(b){b.onclick=function(){addSet(b.getAttribute("data-k"),+b.getAttribute("data-v"))}});
+}
+function addSet(key,vi){
+  var ids=SETS[key].v[vi].ids,added=0;
+  ids.forEach(function(id){var p=byId(id);if(p&&(cart[id]||0)<p.stock){cart[id]=(cart[id]||0)+1;added++}});
+  store("av_cart",JSON.stringify(cart));render();updateBar();drawLines();
+  var t=totals(),O=CONFIG.offer,h="Додано в кошик ("+added+" шт). Зараз у кошику "+money(t.total)+". ";
+  if(!t.open)h+="Ще "+money(O.from-t.sum)+" до товару зі знижкою "+O.percent+"%.";
+  var d=addMsg(esc(h)+'<div class="cset"><button>Відкрити кошик</button></div>',"b");
+  d.querySelector("button").onclick=function(){closeChat();$("openCart").onclick()};
+  offerMsg();
+}
+function giftInfo(){
+  var O=CONFIG.offer;addMsg("При замовленні від "+money(O.from)+" ти можеш отримати товар за "+O.percent+"% вартості. Який саме, покажу в кошику, коли сума сягне "+money(O.from)+". Знижка "+CONFIG.gift+"% зі скриньки діє окремо на звичайні товари.","b");
+}
+function offerMsg(){
+  var t=totals(),O=CONFIG.offer;if(!t.open)return;
+  var ps=offerOptions();if(!ps.length||t.ocnt>=O.max)return;
+  var h="Ще один крок: сума вже від "+money(O.from)+", тож можна додати товар за "+O.percent+"% вартості. Обери:<div class=\"cset\">";
+  ps.forEach(function(p){h+='<button style="margin-bottom:6px" data-id="'+p.id+'">'+esc(giftLabel(p).replace("Лосьйон для тіла ",""))+", "+money(offerPrice(p))+"</button>"});
+  var d=addMsg(h+"</div>","b");
+  d.querySelectorAll("button").forEach(function(b){b.onclick=function(){addOffer(+b.getAttribute("data-id"),1);b.textContent+=" - додано";b.disabled=true}});
+}
+function reply(q){
+  var s=q.toLowerCase();
+  if(/подарун|знижк|акці|бонус|50/.test(s)){giftInfo();return}
+  if(/достав|пошт|відправ/.test(s)){addMsg("Відправляємо Новою поштою по Україні. Місто і відділення вказуєш в кошику при оформленні.","b");return}
+  if(/оплат|накладен|карт|реквізит/.test(s)){addMsg("Оплата при отриманні на Новій пошті (накладений платіж).","b");return}
+  if(/луп|себор/.test(s)){addMsg("Окремого засобу проти лупи серед наявного немає. Якщо турбує шкіра голови, краще проконсультуватися з трихологом. З догляду можу запропонувати щоденний набір.","b");showSet("daily");return}
+  for(var i=0;i<RULES.length;i++)if(RULES[i][0].test(s)){showSet(RULES[i][1]);return}
+  if(/обличч|шкір/.test(s)){addMsg("Що саме з шкірою обличчя: проблемна, схильна до висипань, чи потрібен ліфтинг?","b");setChips([["Проблемна шкіра","acne"],["Ліфтинг","lift"]]);return}
+  if(/привіт|добр|вітаю/.test(s)){addMsg("Привіт! Напиши, що турбує, або обери нижче.","b");return}
+  addMsg("Не зовсім зрозуміла. Напиши коротко, що турбує, наприклад: випадає волосся, жовтизна після блонду, суха шкіра рук. Або обери нижче.","b");
+}
+function setChips(list){
+  var c=$("chatChips");c.innerHTML="";
+  list.forEach(function(x){var b=document.createElement("button");b.type="button";b.textContent=x[0];b.onclick=function(){ask(x[0],x[1])};c.appendChild(b)});
+}
+function ask(label,key){
+  addMsg(esc(label),"u");
+  if(key==="gift")giftInfo();else if(SETS[key])showSet(key);else reply(label);
+}
+function openChat(){$("chat").className="open";$("chatHint").className="";$("chatFab").style.display="none";if(!$("chatBody").children.length){addMsg("Привіт! Напиши коротко, що турбує, і я підберу засоби та складу набір: шампунь, бальзам, маска або сироватка. Волосся наш головний напрям, але є й догляд за обличчям, руками й тілом.","b");setChips(QUICK)}setTimeout(function(){$("chatText").focus()},50)}
+function closeChat(){$("chat").className="";$("chatFab").style.display=""}
+$("chatFab").onclick=openChat;$("chatClose").onclick=closeChat;
+function sendChat(v){
+  addMsg(esc(v),"u");
+  if(CONFIG.chatUrl){
+    fetch(CONFIG.chatUrl,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({message:v})}).then(function(r){return r.json()}).then(function(j){if(j&&j.reply)addMsg(esc(j.reply),"b");else reply(v)}).catch(function(){reply(v)});
+  }else reply(v);
+}
+$("chatForm").onsubmit=function(e){e.preventDefault();var v=$("chatText").value.trim();if(!v)return;$("chatText").value="";sendChat(v)};
+/* hero ask box */
+(function(){
+  var c=$("askChips");
+  [["Випадає волосся","loss"],["Блонд, жовтизна","blond"],["Фарбоване темне","dark"],["Суха шкіра рук","hands"],["Проблемна шкіра","acne"]].forEach(function(x){
+    var b=document.createElement("button");b.type="button";b.textContent=x[0];b.onclick=function(){openChat();ask(x[0],x[1])};c.appendChild(b)});
+  $("askForm").onsubmit=function(e){e.preventDefault();var v=$("askText").value.trim();openChat();if(v){$("askText").value="";sendChat(v)}};
+  function hideHint(){$("chatHint").className="";store("av_hint","1")}
+  $("hintClose").onclick=hideHint;
+  if(!store("av_hint"))setTimeout(function(){if($("chat").className!=="open"&&!seen)$("chatHint").className="on"},4000);
+  $("chatFab").addEventListener("click",hideHint);
+  var seen=false;
+  if(window.IntersectionObserver)new IntersectionObserver(function(en){
+    seen=en[0].isIntersecting;
+    $("chatFab").style.visibility=seen?"hidden":"";
+    if(seen)$("chatHint").className="";
+  },{threshold:.2}).observe($("askForm"));
+})();
+
 /* --- start --- */
 function start(){
   try{cart=JSON.parse(store("av_cart")||"{}")}catch(e){cart={}}
   Object.keys(cart).forEach(function(id){var p=byId(id);if(!p)delete cart[id];else if(cart[id]>p.stock)cart[id]=p.stock});
-  initGift();renderChips();render();updateBar();
+  try{offer=JSON.parse(store("av_offer")||"{}")}catch(e){offer={}}initGift();renderChips();renderBonus();render();updateBar();
   if(CONFIG.telegram){var a=document.createElement("a");a.href=CONFIG.telegram;a.textContent="Є питання? Напиши в Telegram";a.style.cssText="display:block;margin-top:8px;color:#0f5c58";document.querySelector("footer").appendChild(a)}
 }
 if(CONFIG.productsUrl){fetch(CONFIG.productsUrl).then(function(r){return r.json()}).then(function(j){PRODUCTS=j}).catch(function(){}).then(start)}else start();
