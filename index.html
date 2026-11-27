@@ -224,7 +224,7 @@ var CONFIG = {
   gift: 5,                       // знижка для всіх, %
   webhookUrl: "https://vps-25daaac0.vps.ovh.net/webhook/avangard-order",                // URL вебхука n8n, куди йдуть замовлення
   productsUrl: "https://vps-25daaac0.vps.ovh.net/webhook/avangard-products",               // необов'язково: JSON із залишками (Google Sheet через n8n)
-  chatUrl: "",                   // необов'язково: URL AI-вебхука n8n (поки працює вбудований підбір)
+  chatUrl: "https://vps-25daaac0.vps.ovh.net/webhook/avangard-chat",                   // необов'язково: URL AI-вебхука n8n (поки працює вбудований підбір)
   offer: {                       // пропозиція в кошику: товари зі знижкою від певної суми замовлення
     from: 1500,                  // сума замовлення (без цих товарів), від якої пропозиція відкривається
     percent: 50,                 // знижка на ці товари, %
@@ -433,7 +433,7 @@ $("form").addEventListener("submit",function(e){
   var payload={order:data,discountPercent:discount,items:Object.keys(cart).map(function(id){var p=byId(id);return{id:p.id,name:p.name,price:p.price,qty:cart[id]}}).concat(Object.keys(offer).map(function(id){var p=byId(id);return{id:p.id,name:giftLabel(p)+" (акція -"+CONFIG.offer.percent+"%)",price:offerPrice(p),qty:offer[id],offer:true}})),sum:t.sum+t.osum,discount:t.disc,total:t.total,createdAt:new Date().toISOString()};
   $("submitBtn").disabled=true;m.textContent="Відправляю...";
   fetch(CONFIG.webhookUrl,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)})
-    .then(function(r){if(!r.ok)throw 0;m.className="msg ok";m.textContent="Дякуємо! Замовлення прийнято, з тобою зв'яжуться для підтвердження.";keepOpen=true;cart={};store("av_cart","{}");offer={};saveOffer();updateBar();render();drawLines();f.reset();})
+    .then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(j){if(!j||j.ok!==true)throw 0;m.className="msg ok";m.textContent="Дякуємо! Замовлення прийнято, з тобою зв'яжуться для підтвердження.";keepOpen=true;cart={};store("av_cart","{}");offer={};saveOffer();updateBar();render();drawLines();f.reset();})
     .catch(function(){m.className="msg err";m.textContent="Не вдалося відправити. Спробуй ще раз"+(CONFIG.telegram?" або напиши нам у Telegram.":".");})
     .then(function(){$("submitBtn").disabled=false});
 });
@@ -523,8 +523,9 @@ function showSet(key){
   var d=addMsg(h,"b");
   d.querySelectorAll("button").forEach(function(b){b.onclick=function(){addSet(b.getAttribute("data-k"),+b.getAttribute("data-v"))}});
 }
-function addSet(key,vi){
-  var ids=SETS[key].v[vi].ids,added=0;
+function addSet(key,vi){addIds(SETS[key].v[vi].ids)}
+function addIds(ids){
+  var added=0;
   ids.forEach(function(id){var p=byId(id);if(p&&(cart[id]||0)<p.stock){cart[id]=(cart[id]||0)+1;added++}});
   store("av_cart",JSON.stringify(cart));render();updateBar();drawLines();
   var t=totals(),O=CONFIG.offer,h="Додано в кошик ("+added+" шт). Зараз у кошику "+money(t.total)+". ";
@@ -566,11 +567,30 @@ function ask(label,key){
 function openChat(){$("chat").className="open";$("chatHint").className="";$("chatFab").style.display="none";if(!$("chatBody").children.length){addMsg("Привіт! Напиши коротко, що турбує, і я підберу засоби та складу набір: шампунь, бальзам, маска або сироватка. Волосся наш головний напрям, але є й догляд за обличчям, руками й тілом.","b");setChips(QUICK)}setTimeout(function(){$("chatText").focus()},50)}
 function closeChat(){$("chat").className="";$("chatFab").style.display=""}
 $("chatFab").onclick=openChat;$("chatClose").onclick=closeChat;
+var chatHist=[];
+function showAI(j,v){
+  chatHist.push({role:"user",text:v},{role:"assistant",text:j.reply});
+  var ps=(j.ids||[]).map(byId).filter(function(p){return p&&p.stock-(cart[p.id]||0)>=1});
+  var h=esc(j.reply);
+  if(ps.length){
+    var ids=ps.map(function(p){return p.id});
+    h+='<div class="cset"><ul>'+ps.map(function(p){return"<li>"+esc(p.name)+"</li>"}).join("")+'</ul><button>Додати в кошик, '+money(setPrice(ids))+'</button></div>';
+  }
+  var d=addMsg(h,"b");
+  var bt=d.querySelector("button");if(bt)bt.onclick=function(){addIds(ids)};
+}
 function sendChat(v){
   addMsg(esc(v),"u");
-  if(CONFIG.chatUrl){
-    fetch(CONFIG.chatUrl,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({message:v})}).then(function(r){return r.json()}).then(function(j){if(j&&j.reply)addMsg(esc(j.reply),"b");else reply(v)}).catch(function(){reply(v)});
-  }else reply(v);
+  if(!CONFIG.chatUrl){reply(v);return}
+  var wait=addMsg("Підбираю...","b"),done=false;
+  function fin(j){
+    if(done)return;done=true;wait.remove();
+    if(j&&j.ok&&j.reply)showAI(j,v);else reply(v);
+  }
+  var ctl=window.AbortController?new AbortController():null;
+  setTimeout(function(){if(ctl)ctl.abort();fin(null)},25000);
+  fetch(CONFIG.chatUrl,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({message:v,history:chatHist.slice(-6)}),signal:ctl?ctl.signal:undefined})
+    .then(function(r){return r.json()}).then(fin).catch(function(){fin(null)});
 }
 $("chatForm").onsubmit=function(e){e.preventDefault();var v=$("chatText").value.trim();if(!v)return;$("chatText").value="";sendChat(v)};
 /* hero ask box */
