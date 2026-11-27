@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A_Avangard Professional | Новорічний подарунок</title>
+<meta name="description" content="Професійна лінійка A_Avangard Professional. Обери подарунок і отримай знижку на догляд за волоссям, обличчям, руками й тілом.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0a2321;--teal:#0f4b47;--teal2:#16645f;--gold:#c9a24d;--gold2:#e9d6a6;--champ:#f3e6c4;--ivory:#faf6ee;--line:#e7dcc4;--wine:#8f1d2c;--text:#1d2b2a;
+--serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;--sans:"Montserrat",-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--text);background:var(--ivory);line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1020px;margin:0 auto;padding:0 18px}
+.dark{background:radial-gradient(120% 90% at 50% 0%,#14524d 0%,var(--ink) 62%);color:#fff;position:relative;overflow:hidden}
+#garland{position:absolute;left:0;top:0;width:100%;height:90px;pointer-events:none;z-index:2}
+#garland .lt{animation:tw 3.6s ease-in-out infinite}
+@keyframes tw{0%,100%{opacity:.45}50%{opacity:1}}
+@media(prefers-reduced-motion:reduce){#garland .lt{animation:none}}
+.brandbar{padding-top:84px!important}
+#snow{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.brandbar{position:relative;text-align:center;padding:20px 16px 0;font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold2)}
+.brandbar:after{content:"";display:block;width:46px;height:1px;background:var(--gold);margin:12px auto 0}
+.hero{position:relative;text-align:center;padding:34px 0 38px}
+.eyebrow{display:inline-block;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,162,77,.5);padding:7px 14px;border-radius:999px}
+.hero h1{font-family:var(--serif);font-weight:600;font-size:40px;line-height:1.08;margin:18px auto 14px;max-width:640px}
+.hero h1 em{font-style:italic;color:var(--gold2)}
+.hero p.lead{max-width:520px;margin:0 auto 24px;color:rgba(255,255,255,.82);font-size:15px}
+.cta{display:inline-block;background:linear-gradient(135deg,#e9d6a6,#c9a24d 55%,#b58a35);color:#2a1d05;border:0;border-radius:999px;padding:15px 30px;font:600 13px var(--sans);letter-spacing:.14em;text-transform:uppercase;cursor:pointer;box-shadow:0 10px 26px rgba(201,162,77,.28)}
+.trust{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 26px;margin-top:26px;font-size:12px;color:rgba(255,255,255,.7)}
+.trust span:before{content:"\2726";color:var(--gold);margin-right:8px}
+section{padding:34px 0}
+section.gift{padding:8px 0 44px;position:relative}
+h2{font-family:var(--serif);font-weight:600;font-size:30px;line-height:1.1;text-align:center}
+.sub{text-align:center;color:#6a7a78;margin:8px auto 22px;font-size:14px;max-width:520px}
+.dark .sub{color:rgba(255,255,255,.7)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:560px;margin:0 auto}
+.card{position:relative;aspect-ratio:3/4;border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 14px 34px rgba(0,0,0,.35);border:1px solid rgba(233,214,166,.6);transition:opacity .5s,transform .5s}
+.card .under{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:8px;background:radial-gradient(circle at 50% 35%,#fffaf0,#f3e6c4);color:var(--ink)}
+.card .under small{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#7a6a45}
+.card .under b{font-family:var(--serif);font-size:46px;line-height:1;color:var(--wine);margin:4px 0}
+.card .under span{font-size:11px;color:#6a5b3a}
+.card canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;cursor:grab}
+.card.locked{opacity:.38;transform:scale(.95);pointer-events:none;filter:saturate(.6)}
+.card.locked canvas{display:none}
+.note{margin:18px auto 0;text-align:center;max-width:460px;min-height:24px;font-size:14px;color:var(--champ)}
+.note b{color:var(--gold);font-family:var(--serif);font-size:20px}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:9px}
+.chip{border:1px solid var(--teal);background:transparent;color:var(--teal);padding:11px 18px;border-radius:999px;font:500 13px var(--sans);letter-spacing:.04em;cursor:pointer;transition:all .2s}
+.chip:hover{background:rgba(15,75,71,.08)}
+.chip.on{background:var(--teal);color:var(--champ);border-color:var(--teal)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+.p{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:9px;box-shadow:0 2px 0 rgba(201,162,77,.12)}
+.p .ph{height:170px;border-radius:10px;background:radial-gradient(circle at 50% 40%,#fff,#f6efe0);display:flex;align-items:center;justify-content:center;color:#a8955f;font:600 12px var(--sans);letter-spacing:.2em;text-transform:uppercase;text-align:center}
+.p .ph img{max-width:100%;max-height:100%;object-fit:contain}
+.p h3{font-size:13.5px;font-weight:500;line-height:1.4;flex:1}
+.p .meta{font-size:12px;color:#7a8a88}
+.p .meta.old{text-decoration:line-through}
+.p .row{display:flex;align-items:flex-end;justify-content:space-between;gap:6px}
+.price{font-family:var(--serif);font-size:25px;font-weight:700;color:var(--ink);line-height:1}
+.left{font-size:11px;color:var(--wine);font-weight:600;letter-spacing:.04em}
+.btn{background:var(--teal);color:var(--champ);border:0;border-radius:10px;padding:12px 14px;font:600 12px var(--sans);letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
+.btn:hover{background:var(--teal2)}
+.btn:disabled{background:#c9c9c9;color:#fff}
+.btn.sec{background:transparent;color:var(--teal);border:1px solid var(--teal)}
+#cartBar{position:fixed;left:12px;right:12px;bottom:12px;max-width:620px;margin:0 auto;background:var(--ink);color:var(--champ);padding:12px 14px 12px 18px;border-radius:16px;border:1px solid rgba(201,162,77,.5);display:none;justify-content:space-between;align-items:center;z-index:20;box-shadow:0 14px 34px rgba(0,0,0,.35);font-size:14px}
+#cartBar button{background:linear-gradient(135deg,#e9d6a6,#c9a24d);color:#2a1d05;border:0;border-radius:10px;padding:11px 18px;font:600 12px var(--sans);letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+#drawer{position:fixed;inset:0;background:rgba(5,20,19,.6);display:none;z-index:30}
+#drawer .box{position:absolute;right:0;top:0;bottom:0;width:min(450px,100%);background:var(--ivory);overflow:auto;padding:20px}
+#drawer h2{text-align:left;font-size:26px}
+.line{display:flex;gap:8px;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--line);font-size:13px}
+.qty{display:flex;align-items:center;gap:6px}
+.qty button{width:28px;height:28px;border-radius:8px;border:1px solid var(--line);background:#fff;font-size:16px;cursor:pointer}
+label{display:block;font-size:12px;margin:12px 0 4px;color:#5a6b69;letter-spacing:.04em}
+input,select{width:100%;padding:12px;border:1px solid var(--line);border-radius:10px;font:16px var(--sans);background:#fff}
+input:focus,select:focus{outline:2px solid var(--gold);outline-offset:0}
+.tot{margin:16px 0;font-size:14px}
+.tot div{display:flex;justify-content:space-between;padding:3px 0}
+.tot .big{font-family:var(--serif);font-size:24px;font-weight:700;border-top:1px solid var(--line);margin-top:6px;padding-top:8px}
+.msg{margin-top:10px;font-size:14px}
+.ok{color:#1b7a3a}.err{color:var(--wine)}
+footer{background:var(--ink);color:rgba(255,255,255,.6);padding:30px 18px 100px;text-align:center;font-size:12px;letter-spacing:.04em}
+footer b{display:block;font:600 11px var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--gold2);margin-bottom:8px}
+@media(max-width:520px){.hero h1{font-size:33px}h2{font-size:26px}.card .under b{font-size:36px}.p .ph{height:150px}}
+</style>
+</head>
+<body>
+<div class="dark">
+  <canvas id="snow"></canvas>
+  <svg id="garland" aria-hidden="true"></svg>
+  <div class="brandbar">A_Avangard Professional</div>
+  <header class="hero wrap">
+    <span class="eyebrow">Новорічна пропозиція</span>
+    <h1>Професійний догляд, який <em>варто подарувати собі</em></h1>
+    <p class="lead">Професійна лінійка A_Avangard для волосся, обличчя, рук і тіла. Обери свій подарунок і отримай знижку на все замовлення.</p>
+    <button class="cta" id="heroBtn">Обрати подарунок</button>
+    <div class="trust"><span>Професійна лінійка</span><span>Доставка Новою поштою</span><span>Оплата при отриманні</span></div>
+  </header>
+  <section class="gift wrap" id="gift">
+    <h2>Зроби подарунок собі</h2>
+    <p class="sub">Протри пальцем одну з трьох скриньок і дізнайся, яку знижку подарує тобі Avangard.</p>
+    <div class="cards" id="cards"></div>
+    <div class="note" id="giftNote"></div>
+  </section>
+</div>
+
+<main>
+  <section id="topics"><div class="wrap">
+    <h2>Що тобі потрібно?</h2>
+    <p class="sub">Обери напрям, і я покажу, що є в наявності.</p>
+    <div class="chips" id="chips"></div>
+  </div></section>
+  <section id="catalog" style="padding-top:6px"><div class="wrap"><div class="grid" id="grid"></div></div></section>
+</main>
+
+<footer>
+  <b>A_Avangard Professional</b>
+  Пропозиція діє, поки є залишки. Відправлення по Україні Новою поштою, оплата при отриманні.
+</footer>
+
+<div id="cartBar"><span id="barText"></span><button id="openCart">Оформити</button></div>
+
+<div id="drawer"><div class="box">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <h2>Твоє замовлення</h2><button class="btn sec" id="closeCart">Закрити</button>
+  </div>
+  <div id="lines"></div>
+  <div class="tot" id="tot"></div>
+  <form id="form" novalidate>
+    <label>Ім'я та прізвище</label><input name="name" autocomplete="name" required>
+    <label>Телефон</label><input name="phone" type="tel" autocomplete="tel" placeholder="+380" required>
+    <label>Місто</label><input name="city" autocomplete="address-level2" required>
+    <label>Відділення або поштомат Нової пошти</label><input name="branch" placeholder="Наприклад, відділення №12" required>
+    <label>Оплата</label>
+    <select name="payment" id="payment"></select>
+    <label>Коментар (необов'язково)</label><input name="comment">
+    <button class="btn" style="width:100%;margin-top:16px;padding:15px" type="submit" id="submitBtn">Підтвердити замовлення</button>
+    <div class="msg" id="msg"></div>
+  </form>
+</div></div>
+
+<script>
+/* ===== НАЛАШТУВАННЯ (міняється тут) ===== */
+var CONFIG = {
+  gift: 5,                       // знижка для всіх, %
+  webhookUrl: "https://vps-25daaac0.vps.ovh.net/webhook/avangard-order",                // URL вебхука n8n, куди йдуть замовлення
+  productsUrl: "https://vps-25daaac0.vps.ovh.net/webhook/avangard-products",               // необов'язково: JSON із залишками (Google Sheet через n8n)
+  telegram: "",                  // посилання на Telegram для питань, наприклад https://t.me/...
+  bankPayment: { enabled: false, label: "Оплата за реквізитами", note: "" } // увімкнути, коли буде готово
+};
+var PRODUCTS = [{"id": 1, "name": "Шампунь для нормального і природнього волосся daily care", "size": "100 мл", "price": 360, "stock": 30, "topic": "hair", "img": "https://avangard-beauty.com/wp-content/uploads/2020/12/100-sampoo-w-2.png"}, {"id": 2, "name": "Шампунь для нормального і природнього волосся daily care", "size": "250 мл", "price": 600, "stock": 44, "topic": "hair", "img": "https://avangard-beauty.com/wp-content/uploads/2020/12/250-sampoo-w-2.png"}, {"id": 3, "name": "Шампунь для нормального і природнього волосся daily care", "size": "500 мл", "price": 920, "stock": 5, "topic": "hair", "img": "https://avangard-beauty.com/wp-content/uploads/2020/12/500-sampoo-w-1.png"}, {"id": 4, "name": "Бальзам-кондиціонер universal, 100 мл", "size": "", "price": 370, "stock": 3, "topic": "hair", "img": "https://avangard-beauty.com/wp-content/uploads/2020/12/100-cond-2.png"}, {"id": 5, "name": "Бальзам-кондиціонер universal, 250 мл", "size": "", "price": 650, "stock": 42, "topic": "hair", "img": "https://avangard-beauty.com/wp-content/uploads/2020/12/250-Cond-3.png"}, {"id": 6, "name": "Бальзам-кондиціонер universal, 500 мл", "size": "", "price": 1000, "stock": 29, "topic": "hair", "img": "https://avangard-beauty.com/wp-content/uploads/2020/12/500-cond-1.png"}, {"id": 7, "name": "Спрей-кондиціонер для волосся з фітокератином та амінокислотами – 100мл", "size": "", "price": 500, "stock": 15, "topic": "hair", "img": "https://avangard-beauty.com/wp-content/uploads/2023/01/photo_2023-01-26_08-51-29-1.jpg"}, {"id": 9, "name": "Колагеново-кератинова вітамінна маска для всіх типів волосся daily care", "size": "250 мл", "price": 550, "stock": 18, "topic": "hair", "img": "https://avangard-beauty.com/wp-content/uploads/2024/11/mask.png"}, {"id": 10, "name": "Натуральний твердий шампунь з кондиціонуючим ефектом", "size": "100 г", "price": 500, "stock": 15, "topic": "hair", "img": "https://avangard-beauty.com/wp-content/uploads/2024/11/solid-shampoo.png"}, {"id": 11, "name": "Спрей-олія для відновлення волосся 100мл", "size": "", "price": 590, "stock": 33, "topic": "hair", "img": "https://avangard-beauty.com/wp-content/uploads/2023/01/photo_2023-01-26_20-16-26.jpg"}, {"id": 12, "name": "Спрей-олія для відновлення волосся 250 мл", "size": "", "price": 960, "stock": 1, "topic": "hair", "img": "https://avangard-beauty.com/wp-content/uploads/2023/01/photo_2023-01-26_08-58-04.jpg"}, {"id": 13, "name": "Шампунь проти випадіння волосся hair loss prevention, 100 мл", "size": "", "price": 320, "stock": 41, "topic": "loss", "img": "https://avangard-beauty.com/wp-content/uploads/2020/12/100-sampoo-m-2.png"}, {"id": 14, "name": "Шампунь проти випадіння волосся hair loss prevention, 250 мл", "size": "", "price": 650, "stock": 27, "topic": "loss", "img": "https://avangard-beauty.com/wp-content/uploads/2020/12/250-sampoo-m-2.png"}, {"id": 15, "name": "Шампунь проти випадіння волосся hair loss prevention, 500 мл", "size": "", "price": 970, "stock": 14, "topic": "loss", "img": "https://avangard-beauty.com/wp-content/uploads/2020/12/500-sampoo-m-1.png"}, {"id": 16, "name": "Бальзам для зміцнення та профілактики випадіння волосся,100 мл", "size": "", "price": 370, "stock": 46, "topic": "loss", "img": "https://avangard-beauty.com/wp-content/uploads/2024/04/photo_2024-04-03_22-29-43.jpg"}, {"id": 17, "name": "Бальзам для зміцнення та профілактики випадіння волосся,250 мл", "size": "", "price": 700, "stock": 42, "topic": "loss", "img": "https://avangard-beauty.com/wp-content/uploads/2024/04/photo_2024-04-03_22-37-08.jpg"}, {"id": 18, "name": "Бальзам для зміцнення та профілактики випадіння волосся,500 мл", "size": "", "price": 1050, "stock": 36, "topic": "loss", "img": "https://avangard-beauty.com/wp-content/uploads/2024/04/photo_2024-04-03_22-38-32.jpg"}, {"id": 19, "name": "Маска для зміцнення та профілактики випадіння волосся, 100 мл", "size": "", "price": 400, "stock": 39, "topic": "loss", "img": "https://avangard-beauty.com/wp-content/uploads/2021/06/100-mask-m.png"}, {"id": 20, "name": "Маска для зміцнення та профілактики випадіння волосся, 250 мл", "size": "", "price": 650, "stock": 26, "topic": "loss", "img": "https://avangard-beauty.com/wp-content/uploads/2021/06/250-mask-m.png"}, {"id": 21, "name": "Маска для зміцнення та профілактики випадіння волосся, 500 мл", "size": "", "price": 1000, "stock": 21, "topic": "loss", "img": "https://avangard-beauty.com/wp-content/uploads/2021/06/500-mask-m.png"}, {"id": 22, "name": "Плацентарна актив-есенція для шкіри голови від інтенсивного випадіння волосся з пептидом Capixyl™ 30 мл", "size": "", "price": 620, "stock": 1, "topic": "loss"}, {"id": 24, "name": "Шампунь для фарбованого волосся темних відтінків з функцією збереження кольору, 100 мл", "size": "", "price": 250, "stock": 17, "topic": "color", "img": "https://avangard-beauty.com/wp-content/uploads/2025/04/100-ml-Color-shampoo.webp"}, {"id": 25, "name": "Шампунь для фарбованого волосся темних відтінків з функцією збереження кольору, 250 мл", "size": "", "price": 590, "stock": 36, "topic": "color", "img": "https://avangard-beauty.com/wp-content/uploads/2025/04/100-ml-Color-shampoo.webp"}, {"id": 26, "name": "Шампунь для фарбованого волосся темних відтінків з функцією збереження кольору, 500 мл", "size": "", "price": 980, "stock": 14, "topic": "color", "img": "https://avangard-beauty.com/wp-content/uploads/2025/04/100-ml-Color-shampoo.webp"}, {"id": 27, "name": "Маска для фарбованого волосся темних відтінків з функцією збереження кольору, 100 мл", "size": "", "price": 270, "stock": 18, "topic": "color", "img": "https://avangard-beauty.com/wp-content/uploads/2025/04/100-ml-Color-mask.webp"}, {"id": 28, "name": "Маска для фарбованого волосся темних відтінків з функцією збереження кольору, 250 мл", "size": "", "price": 600, "stock": 34, "topic": "color", "img": "https://avangard-beauty.com/wp-content/uploads/2025/04/100-ml-Color-mask.webp"}, {"id": 29, "name": "Маска для фарбованого волосся темних відтінків з функцією збереження кольору, 500 мл", "size": "", "price": 990, "stock": 13, "topic": "color", "img": "https://avangard-beauty.com/wp-content/uploads/2025/04/100-ml-Color-mask.webp"}, {"id": 30, "name": "Шампунь для нейтралізації жовтизни та сяйва волосся, фарбованого у відтінки блонд, 100 мл", "size": "", "price": 250, "stock": 18, "topic": "color", "img": "https://avangard-beauty.com/wp-content/uploads/2025/04/100-ml-Blonde-shampoo-1.webp"}, {"id": 31, "name": "Шампунь для нейтралізації жовтизни та сяйва волосся, фарбованого у відтінки блонд, 250 мл", "size": "", "price": 590, "stock": 35, "topic": "color", "img": "https://avangard-beauty.com/wp-content/uploads/2025/04/100-ml-Blonde-shampoo-1.webp"}, {"id": 32, "name": "Шампунь для нейтралізації жовтизни та сяйва волосся, фарбованого у відтінки блонд, 500 мл", "size": "", "price": 980, "stock": 16, "topic": "color", "img": "https://avangard-beauty.com/wp-content/uploads/2025/04/100-ml-Blonde-shampoo-1.webp"}, {"id": 33, "name": "Маска для нейтралізації жовтизни освітленого волосся, 100 мл", "size": "", "price": 270, "stock": 17, "topic": "color", "img": "https://avangard-beauty.com/wp-content/uploads/2025/04/100-ml-Blonde-mask.webp"}, {"id": 34, "name": "Маска для нейтралізації жовтизни освітленого волосся, 250 мл", "size": "", "price": 600, "stock": 35, "topic": "color", "img": "https://avangard-beauty.com/wp-content/uploads/2025/04/100-ml-Blonde-mask.webp"}, {"id": 35, "name": "Маска для нейтралізації жовтизни освітленого волосся, 500 мл", "size": "", "price": 990, "stock": 15, "topic": "color", "img": "https://avangard-beauty.com/wp-content/uploads/2025/04/100-ml-Blonde-mask.webp"}, {"id": 36, "name": "Термозахисний спрей-нейтралізатор жовтизни для фарбованого волосся світлих відтінків, 100 мл", "size": "", "price": 990, "stock": 32, "topic": "color", "img": "https://avangard-beauty.com/wp-content/uploads/2025/04/100-ml-Blonde-Protection-Spray.webp"}, {"id": 37, "name": "Термозахисний вітамінний спрей для фарбованого волосся темно-русих відтінків «Захист кольору», 100 мл", "size": "", "price": 650, "stock": 33, "topic": "color", "img": "https://avangard-beauty.com/wp-content/uploads/2025/04/100-ml-Color-Protection-Spray.webp"}, {"id": 38, "name": "Зволожуючий гель-пілінг для вмивання A_Avangard Professional,100 мл", "size": "", "price": 710, "stock": 27, "topic": "face", "img": "https://avangard-beauty.com/wp-content/uploads/2024/06/gel.webp"}, {"id": 39, "name": "Біо-активний трояндовий експрес-тонік, 100 мл", "size": "", "price": 690, "stock": 24, "topic": "face", "img": "https://avangard-beauty.com/wp-content/uploads/2024/06/Tonik.webp"}, {"id": 40, "name": "Крем Денний ліфтинг актив, 50 мл", "size": "", "price": 690, "stock": 12, "topic": "face", "img": "https://avangard-beauty.com/wp-content/uploads/2022/08/DAY-LIFTING-ACTIVE.png"}, {"id": 41, "name": "Крем Нічний ліфтинг актив, 50 мл", "size": "", "price": 690, "stock": 8, "topic": "face", "img": "https://avangard-beauty.com/wp-content/uploads/2022/08/NIGHT-LIFTING-ACTIVE.png"}, {"id": 42, "name": "Крем-ліфтинг для шкіри навколо очей,30 мл", "size": "", "price": 720, "stock": 11, "topic": "face", "img": "https://avangard-beauty.com/wp-content/uploads/2022/08/Lifting-Eye-Cream.png"}, {"id": 43, "name": "Гелева нано пептидна маска для миттєвого ліфтингу, 100 мл", "size": "", "price": 750, "stock": 1, "topic": "face", "img": "https://avangard-beauty.com/wp-content/uploads/2024/12/photo_2024-12-24_11-33-43.webp"}, {"id": 44, "name": "Комплекс для карбоксі терапії з пептидами 3*50 мл", "size": "", "price": 1750, "stock": 2, "topic": "face"}, {"id": 45, "name": "Освітлююча антивікова маска з коєвою кислотою та комплексом Hyafactor-NAG, 100 мл", "size": "", "price": 690, "stock": 4, "topic": "face"}, {"id": 46, "name": "Очищуючий антибактеріальний мус для проблемної та схильної до висипань шкіри, 150 мл", "size": "", "price": 970, "stock": 29, "topic": "face", "img": "https://avangard-beauty.com/wp-content/uploads/2024/01/mousse-2.jpg"}, {"id": 47, "name": "Антибактеріальний тонік для проблемної та схильної до висипань шкіри, 200 мл", "size": "", "price": 930, "stock": 29, "topic": "face", "img": "https://avangard-beauty.com/wp-content/uploads/2024/01/tonic.webp"}, {"id": 48, "name": "Зволожуючий крем для проблемної та схильної до висипань шкіри, 100 мл", "size": "", "price": 700, "stock": 36, "topic": "face", "img": "https://avangard-beauty.com/wp-content/uploads/2024/01/cream-1.webp"}, {"id": 49, "name": "Нічна сироватка- бустер з органічними кислотами для проблемної та схильної до висипань шкіри, 50 мл", "size": "", "price": 990, "stock": 19, "topic": "face", "img": "https://avangard-beauty.com/wp-content/uploads/2024/01/serum-3.webp"}, {"id": 50, "name": "Гелева, анти-акне маска для проблемної шкіри проти акне і вугрових висипань з азелаїновою та рослинною саліциловою кислотою, 50 мл", "size": "", "price": 550, "stock": 4, "topic": "face", "img": "https://avangard-beauty.com/wp-content/uploads/2024/12/IMG_4614.jpeg"}, {"id": 51, "name": "Гідрофільна олія для очищення сухої шкіри обличчя від макіяжу \"Double aqua effect\", 200 мл", "size": "", "price": 590, "stock": 23, "topic": "face", "img": "https://avangard-beauty.com/wp-content/uploads/2024/11/Hydrophilic-peptide-oil.png"}, {"id": 52, "name": "Антибактеріальна міцелярна вода для очищення жирної та проблемної шкіри обличчя від макіяжу \"Anti-inflammatory effect\", 200 мл", "size": "", "price": 450, "stock": 5, "topic": "face", "img": "https://avangard-beauty.com/wp-content/uploads/2024/11/Antibacterial-micellar-water.png"}, {"id": 53, "name": "Двофазна біо-міцелярна вода для демакіяжу зони повік та очей \"Anti age effect\", 200 мл", "size": "", "price": 490, "stock": 4, "topic": "face", "img": "https://avangard-beauty.com/wp-content/uploads/2024/11/bio-micellar.png"}, {"id": 54, "name": "Антибактеріальне, безсульфатне мило з іонами срібла, 500 мл", "size": "", "price": 290, "stock": 3, "topic": "hands", "img": "https://avangard-beauty.com/wp-content/uploads/2024/12/photo_2024-12-24_10-49-15.webp"}, {"id": 57, "name": "Аква-флюїд для догляду за шкірою рук та тіла, 100 мл", "size": "", "price": 390, "stock": 25, "topic": "hands"}, {"id": 58, "name": "Аква-флюїд для догляду за шкірою рук та тіла, 250 мл", "size": "", "price": 550, "stock": 17, "topic": "hands"}, {"id": 59, "name": "Живильно-вітамінний крем для рук з обліпиховою олією, 100 мл", "size": "", "price": 390, "stock": 31, "topic": "hands"}, {"id": 60, "name": "Живильно-вітамінний крем для рук з обліпиховою олією, 250 мл", "size": "", "price": 550, "stock": 20, "topic": "hands"}, {"id": 61, "name": "Живильний крем для рук з ароматом карамелі, 100 мл", "size": "", "price": 390, "stock": 33, "topic": "hands"}, {"id": 62, "name": "Живильний крем для рук з ароматом карамелі, 250 мл", "size": "", "price": 550, "stock": 19, "topic": "hands"}, {"id": 63, "name": "Живильно-вітамінний крем для рук з обліпиховою олією та екстрактом кореню імбиру A_Avangard Professional, 100 мл", "size": "", "price": 390, "stock": 20, "topic": "hands", "img": "https://avangard-beauty.com/wp-content/uploads/2025/09/IMG_7935.jpeg"}, {"id": 64, "name": "Живильно-вітамінний крем для рук з обліпиховою олією та екстрактом кореню імбиру A_Avangard Professional, 250 мл", "size": "", "price": 550, "stock": 16, "topic": "hands", "img": "https://avangard-beauty.com/wp-content/uploads/2025/09/IMG_7935.jpeg"}, {"id": 65, "name": "Живильний крем для рук A_Avangard Professional для професійного та домашнього використання з ароматом вишні, 100 мл", "size": "", "price": 390, "stock": 19, "topic": "hands", "img": "https://avangard-beauty.com/wp-content/uploads/2025/09/IMG_7931.jpeg"}, {"id": 66, "name": "Живильний крем для рук A_Avangard Professional для професійного та домашнього використання з ароматом вишні, 250 мл", "size": "", "price": 550, "stock": 13, "topic": "hands", "img": "https://avangard-beauty.com/wp-content/uploads/2025/09/IMG_7931.jpeg"}, {"id": 67, "name": "Аква-флюїд для рук з морським колагеном та комплексом морських водоростей та ароматом вівсяного молочка з шоколадом, 100 мл", "size": "", "price": 390, "stock": 21, "topic": "hands", "img": "https://avangard-beauty.com/wp-content/uploads/2025/09/IMG_7933.jpeg"}, {"id": 68, "name": "Аква-флюїд для рук з морським колагеном та комплексом морських водоростей та ароматом вівсяного молочка з шоколадом, 250 мл", "size": "", "price": 550, "stock": 16, "topic": "hands", "img": "https://avangard-beauty.com/wp-content/uploads/2025/09/IMG_7933.jpeg"}, {"id": 69, "name": "Інтенсивний крем-ексфоліант для ніг з мікрокапсулами олії жожоба та сечовиною, 250 мл", "size": "", "price": 440, "stock": 1, "topic": "hands", "img": "https://avangard-beauty.com/wp-content/uploads/2022/07/Intensive-Exfoliant-Cream.png"}, {"id": 72, "name": "Протигрибковий універсальний спрей для ніг та взуття, 250 мл", "size": "", "price": 480, "stock": 10, "topic": "hands", "img": "https://avangard-beauty.com/wp-content/uploads/2022/07/Antifungal-foot-spray.png"}, {"id": 73, "name": "Чоловічий біо дезодорант Island Life, Avangard Professional, 100 мл", "size": "", "price": 500, "stock": 3, "topic": "body", "img": "https://avangard-beauty.com/wp-content/uploads/2025/01/photo_2025-01-02_15-02-44.webp"}, {"id": 74, "name": "Біо-дезодорант жіночий Euphoria Fresh, Avangard Professional, 100 мл", "size": "", "price": 500, "stock": 6, "topic": "body", "img": "https://avangard-beauty.com/wp-content/uploads/2025/01/photo_2025-01-02_15-02-33.webp"}, {"id": 75, "name": "Біо-дезодорант унісекс Adventures Life, Avangard Professional, 100 мл", "size": "", "price": 500, "stock": 8, "topic": "body", "img": "https://avangard-beauty.com/wp-content/uploads/2025/01/photo_2025-01-02_15-02-40.webp"}, {"id": 76, "name": "Гель для душу \"French breeze\" для чутливої та сухої шкіри, 250 мл", "size": "", "price": 450, "stock": 2, "topic": "body", "img": "https://avangard-beauty.com/wp-content/uploads/2021/10/FrenchBreeze-gel.webp"}, {"id": 78, "name": "Гель для душу \"Fresh lime\" для чутливої та сухої шкіри, 250 мл", "size": "", "price": 450, "stock": 3, "topic": "body", "img": "https://avangard-beauty.com/wp-content/uploads/2021/10/FreshLime-gel.webp"}, {"id": 79, "name": "Гель для душу \"Fresh lime\" для чутливої та сухої шкіри, 125 мл", "size": "", "price": 250, "stock": 9, "topic": "body", "img": "https://avangard-beauty.com/wp-content/uploads/2021/10/FreshLime-gel.webp"}, {"id": 80, "name": "Гель для душу \"Elegant silk\" для чутливої та сухої шкіри, 250 мл", "size": "", "price": 450, "stock": 5, "topic": "body", "img": "https://avangard-beauty.com/wp-content/uploads/2025/04/photo_2025-04-09_12-18-38.webp"}, {"id": 81, "name": "Гель для душу \"Elegant silk\" для чутливої та сухої шкіри, 125 мл", "size": "", "price": 250, "stock": 2, "topic": "body", "img": "https://avangard-beauty.com/wp-content/uploads/2025/04/photo_2025-04-09_12-18-38.webp"}, {"id": 82, "name": "Гель для душу \"Perfume composition\" для схильної до подразнень шкіри, 250 мл", "size": "", "price": 450, "stock": 6, "topic": "body", "img": "https://avangard-beauty.com/wp-content/uploads/2021/10/PerfumeComposition-gel.webp"}, {"id": 83, "name": "Гель для душу \"Perfume composition\" для схильної до подразнень шкіри, 125 мл", "size": "", "price": 250, "stock": 4, "topic": "body", "img": "https://avangard-beauty.com/wp-content/uploads/2021/10/PerfumeComposition-gel.webp"}, {"id": 84, "name": "Гель для душу \"Flower melody \" для схильної до подразнень шкіри, 250 мл", "size": "", "price": 450, "stock": 4, "topic": "body", "img": "https://avangard-beauty.com/wp-content/uploads/2025/04/photo_2025-04-09_12-37-07.webp"}, {"id": 85, "name": "Гель для душу \"Flower melody \" для схильної до подразнень шкіри, 125 мл", "size": "", "price": 250, "stock": 1, "topic": "body", "img": "https://avangard-beauty.com/wp-content/uploads/2025/04/photo_2025-04-09_12-37-07.webp"}, {"id": 86, "name": "Гель для душу \" Aroma therapy \" для схильної до подразнень шкіри, 250 мл", "size": "", "price": 450, "stock": 5, "topic": "body", "img": "https://avangard-beauty.com/wp-content/uploads/2021/10/AromaTherapy-gel-1.webp"}, {"id": 87, "name": "Гель для душу \" Aroma therapy \" для схильної до подразнень шкіри, 125 мл", "size": "", "price": 250, "stock": 1, "topic": "body", "img": "https://avangard-beauty.com/wp-content/uploads/2021/10/AromaTherapy-gel-1.webp"}, {"id": 88, "name": "Лосьйон для тіла \"French breeze\" для чутливої та сухої шкіри, 250 мл", "size": "", "price": 500, "stock": 11, "topic": "body", "img": "https://avangard-beauty.com/wp-content/uploads/2021/10/FrenchBreeze-lotion.png"}, {"id": 89, "name": "Лосьйон для тіла \"French breeze\" для чутливої та сухої шкіри,125 мл", "size": "", "price": 250, "stock": 3, "topic": "body", "img": "https://avangard-beauty.com/wp-content/uploads/2021/10/FrenchBreeze-lotion.png"}, {"id": 90, "name": "Лосьйон для тіла \"Fresh lime\" для чутливої та сухої шкіри, 250 мл", "size": "", "price": 500, "stock": 9, "topic": "body", "img": "https://avangard-beauty.com/wp-content/uploads/2021/10/FreshLime-lotion.webp"}, {"id": 91, "name": "Лосьйон для тіла \"Fresh lime\" для чутливої та сухої шкіри, 125 мл", "size": "", "price": 250, "stock": 5, "topic": "body", "img": "https://avangard-beauty.com/wp-content/uploads/2021/10/FreshLime-lotion.webp"}, {"id": 92, "name": "Лосьйон для тіла \"Elegant silk\" для чутливої та сухої шкіри, 250 мл", "size": "", "price": 500, "stock": 12, "topic": "body", "img": "https://avangard-beauty.com/wp-content/uploads/2025/04/photo_2025-04-08_12-20-14.webp"}, {"id": 93, "name": "Лосьйон для тіла \"Elegant silk\" для чутливої та сухої шкіри, 125 мл", "size": "", "price": 250, "stock": 4, "topic": "body", "img": "https://avangard-beauty.com/wp-content/uploads/2025/04/photo_2025-04-08_12-20-14.webp"}, {"id": 94, "name": "Лосьйон для тіла \"Perfume composition\" для схильної до подразнень шкіри, 250 мл", "size": "", "price": 500, "stock": 12, "topic": "body", "img": "https://avangard-beauty.com/wp-content/uploads/2021/10/PerfumeComposition-lotion.webp"}, {"id": 95, "name": "Лосьйон для тіла \"Perfume composition\" для схильної до подразнень шкіри, 125 мл", "size": "", "price": 250, "stock": 4, "topic": "body", "img": "https://avangard-beauty.com/wp-content/uploads/2021/10/PerfumeComposition-lotion.webp"}, {"id": 96, "name": "Лосьйон для тіла \"Flower melody \" для схильної до подразнень шкіри, 250 мл", "size": "", "price": 500, "stock": 14, "topic": "body", "img": "https://avangard-beauty.com/wp-content/uploads/2025/04/photo_2025-04-08_12-11-12.webp"}, {"id": 97, "name": "Лосьйон для тіла \"Flower melody \" для схильної до подразнень шкіри, 125 мл", "size": "", "price": 250, "stock": 4, "topic": "body", "img": "https://avangard-beauty.com/wp-content/uploads/2025/04/photo_2025-04-08_12-11-12.webp"}, {"id": 98, "name": "Лосьйон для тіла \" Aroma therapy \" для схильної до подразнень шкіри, 250 мл", "size": "", "price": 500, "stock": 16, "topic": "body", "img": "https://avangard-beauty.com/wp-content/uploads/2021/10/AromaTherapy_lotion-1.png"}, {"id": 99, "name": "Лосьйон для тіла \" Aroma therapy \" для схильної до подразнень шкіри, 125 мл", "size": "", "price": 250, "stock": 3, "topic": "body", "img": "https://avangard-beauty.com/wp-content/uploads/2021/10/AromaTherapy_lotion-1.png"}, {"id": 100, "name": "Заспокійлива зволожуюча емульсія після депіляції в зоні бікіні та пахв для сповільнення росту волосся, 50 мл", "size": "", "price": 490, "stock": 3, "topic": "intim", "img": "https://avangard-beauty.com/wp-content/uploads/2024/12/photo_2024-12-24_10-59-44.webp"}, {"id": 102, "name": "Гель для інтимної гігієни на з молочною кислотою, Д-пантенолом, бета-глюканом та пробіотиками, 250 мл", "size": "", "price": 270, "stock": 1, "topic": "intim", "img": "https://avangard-beauty.com/wp-content/uploads/2024/12/photo_2024-12-24_10-29-31.webp"}, {"id": 103, "name": "Інтимний гель-лубрикант з екстрактом мускусу, 30 мл", "size": "", "price": 450, "stock": 6, "topic": "intim", "img": "https://avangard-beauty.com/wp-content/uploads/2024/12/photo_2024-12-24_10-55-20.webp"}, {"id": 105, "name": "Розігріваюча антицелюлітна олія для масажу, 250 мл", "size": "", "price": 650, "stock": 15, "topic": "body", "img": "https://avangard-beauty.com/wp-content/uploads/2022/02/2.jpg"}, {"id": 106, "name": "Антицелюлітний розігріваючий крем-скраб для тіла з екстрактами перцю чилі, імбиру,меленими абрикосовими кісточками і частинками волоського горіха, 200 мл", "size": "", "price": 380, "stock": 4, "topic": "body", "img": "https://avangard-beauty.com/wp-content/uploads/2024/12/photo_2024-12-24_11-46-27.webp"}, {"id": 107, "name": "Шоколадний крем-мус з екстрактом центелли азіатської для домашніх процедур обгортання, 250 мл", "size": "", "price": 670, "stock": 7, "topic": "body"}, {"id": 108, "name": "Масажний гель для тіла з екстрактом центели азіатської, морським колагеном та антицелюлітним комплексом Lipofirm, 250 мл", "size": "", "price": 750, "stock": 9, "topic": "body"}, {"id": 109, "name": "Натуральна дитяча олійка для шкіри малюків, 150 мл", "size": "", "price": 490, "stock": 5, "topic": "kids", "img": "https://avangard-beauty.com/wp-content/uploads/2022/08/Oliyka.jpg"}, {"id": 110, "name": "Крем для шкіри малят від попрілостей, 75 мл", "size": "", "price": 390, "stock": 4, "topic": "kids", "img": "https://avangard-beauty.com/wp-content/uploads/2022/08/Krem.jpg"}, {"id": 111, "name": "Натуральний шампунь для дитячого волосся, 300 мл", "size": "", "price": 390, "stock": 7, "topic": "kids", "img": "https://avangard-beauty.com/wp-content/uploads/2022/07/kids-shampoo.jpg"}, {"id": 112, "name": "Фіто-гель для душу та вани на відварі трав, 300 мл", "size": "", "price": 350, "stock": 2, "topic": "kids"}, {"id": 113, "name": "Дитяче антибактеріальне мило для рук з Д-пантенолом та ромашкою 500 мл", "size": "", "price": 400, "stock": 4, "topic": "kids", "img": "https://avangard-beauty.com/wp-content/uploads/2022/07/kids-soap-1.jpg"}, {"id": 114, "name": "Набір дитячих бомбочок для ванн з 3-х кульок", "size": "225 г", "price": 350, "stock": 9, "topic": "kids", "img": "https://avangard-beauty.com/wp-content/uploads/2022/08/Bombs.jpg"}, {"id": 115, "name": "Денний сонцезахисний крем для обличчя та тіла SPF 50", "size": "100 мл", "price": 890, "stock": 28, "topic": "kids", "img": "https://avangard-beauty.com/wp-content/uploads/2025/06/SUNSCREEN-CREAM.png"}];
+/* ======================================== */
+
+var TOPICS = [
+  ["all","Усе"],["loss","Від випадіння"],["color","Блонд і фарбоване"],["hair","Догляд за волоссям"],
+  ["hands","Руки і ноги"],["face","Обличчя"],["body","Тіло"],["kids","Діти"],["intim","Інтимна гігієна"]
+];
+var topic = "all", cart = {}, discount = 0;
+var $ = function(id){return document.getElementById(id)};
+function money(n){return Math.round(n).toLocaleString("uk-UA")+" ₴"}
+function store(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){}return null}
+
+/* --- scratch cards --- */
+function initGift(){
+  var wrap=$("cards"), won=store("av_gift");
+  if(won){discount=+won;showWon(true);}
+  for(var i=0;i<3;i++){
+    var d=document.createElement("div");d.className="card";
+    d.innerHTML='<div class="under"><small>твоя знижка</small><b>-'+CONFIG.gift+'%</b><span>на все замовлення</span></div><canvas></canvas>';
+    wrap.appendChild(d);
+  }
+  var cards=wrap.querySelectorAll(".card");
+  cards.forEach(function(card,idx){
+    var cv=card.querySelector("canvas");
+    if(won){if(idx===0)cv.style.display="none";else{card.classList.add("locked");lockText(card);}return;}
+    setupScratch(card,cv,cards);
+  });
+}
+function lockText(card){card.querySelector(".under").innerHTML='<span>подарунок<br>вже обрано</span>';}
+function drawFoil(ctx,w,h){
+  var g=ctx.createLinearGradient(0,0,w,h);
+  g.addColorStop(0,"#e9d6a6");g.addColorStop(.35,"#c9a24d");g.addColorStop(.6,"#f3e3b5");g.addColorStop(1,"#b58a35");
+  ctx.fillStyle=g;ctx.fillRect(0,0,w,h);
+  ctx.globalAlpha=.18;ctx.strokeStyle="#fff";ctx.lineWidth=1;
+  for(var k=-h;k<w;k+=14){ctx.beginPath();ctx.moveTo(k,0);ctx.lineTo(k+h,h);ctx.stroke();}
+  ctx.globalAlpha=1;
+  var rb="#7d1626";ctx.fillStyle=rb;
+  ctx.fillRect(w/2-9,0,18,h);ctx.fillRect(0,h/2-9,w,18);
+  ctx.globalAlpha=.35;ctx.fillStyle="#fff";ctx.fillRect(w/2-9,0,3,h);ctx.fillRect(0,h/2-9,w,3);ctx.globalAlpha=1;
+  ctx.fillStyle=rb;ctx.beginPath();ctx.ellipse(w/2-16,h/2-6,16,10,-.5,0,7);ctx.ellipse(w/2+16,h/2-6,16,10,.5,0,7);ctx.fill();
+  ctx.fillStyle="#a32238";ctx.beginPath();ctx.arc(w/2,h/2,8,0,7);ctx.fill();
+  var pw=Math.min(78,w-16);ctx.fillStyle="#f3e6c4";ctx.beginPath();
+  if(ctx.roundRect){ctx.roundRect(w/2-pw/2,h-34,pw,22,11);}else{ctx.rect(w/2-pw/2,h-34,pw,22);}ctx.fill();
+  ctx.fillStyle="#5a4310";ctx.font="600 11px Georgia,serif";ctx.textAlign="center";ctx.fillText("ПРОТРИ",w/2,h-19);
+}
+function setupScratch(card,cv,cards){
+  var r=card.getBoundingClientRect(),dpr=window.devicePixelRatio||1;
+  cv.width=r.width*dpr;cv.height=r.height*dpr;
+  var ctx=cv.getContext("2d");ctx.scale(dpr,dpr);
+  drawFoil(ctx,r.width,r.height);
+  var down=false,done=false;
+  function pos(e){var b=cv.getBoundingClientRect();return [e.clientX-b.left,e.clientY-b.top]}
+  function scratch(e){
+    if(!down||done)return;var p=pos(e);
+    ctx.globalCompositeOperation="destination-out";ctx.beginPath();ctx.arc(p[0],p[1],22,0,7);ctx.fill();check();
+  }
+  var tick=0;
+  function check(){
+    if(++tick%6)return;
+    var w=cv.width,h=cv.height,data=ctx.getImageData(0,0,w,h).data,c=0,n=0;
+    for(var i=3;i<data.length;i+=64){n++;if(data[i]===0)c++;}
+    if(c/n>0.4){done=true;win(card,cards);}
+  }
+  cv.addEventListener("pointerdown",function(e){down=true;cv.setPointerCapture(e.pointerId);scratch(e)});
+  cv.addEventListener("pointermove",scratch);
+  cv.addEventListener("pointerup",function(){down=false});
+  cv.addEventListener("pointercancel",function(){down=false});
+}
+function win(card,cards){
+  card.querySelector("canvas").style.display="none";
+  cards.forEach(function(c){if(c!==card){c.classList.add("locked");lockText(c);}});
+  discount=CONFIG.gift;store("av_gift",String(discount));showWon(false);render();updateBar();
+}
+function showWon(again){
+  $("giftNote").innerHTML=(again?"Твій подарунок вже обрано. ":"Вітаю з подарунком. ")+"Знижка <b>"+CONFIG.gift+"%</b> діє на все замовлення. Обирай догляд нижче.";$("giftNote").className="note on";
+}
+
+/* --- topics + catalog --- */
+function renderChips(){
+  var c=$("chips");c.innerHTML="";
+  var have={};PRODUCTS.forEach(function(p){have[p.topic]=1});
+  TOPICS.forEach(function(t){
+    if(t[0]!=="all"&&!have[t[0]])return;
+    var b=document.createElement("button");b.className="chip"+(topic===t[0]?" on":"");b.textContent=t[1];
+    b.onclick=function(){topic=t[0];renderChips();render();$("catalog").scrollIntoView({behavior:"smooth"})};
+    c.appendChild(b);
+  });
+}
+function render(){
+  var g=$("grid");g.innerHTML="";
+  PRODUCTS.filter(function(p){return topic==="all"||p.topic===topic}).forEach(function(p){
+    var left=p.stock-(cart[p.id]||0);
+    var el=document.createElement("div");el.className="p";
+    var pr=discount?'<div class="price">'+money(p.price*(1-discount/100))+'</div><div class="meta old">'+money(p.price)+' без знижки</div>':'<div class="price">'+money(p.price)+'</div>';
+    el.innerHTML='<div class="ph">'+(p.img?'<img loading="lazy" alt="" src="'+p.img+'" onerror="this.remove()">':'Avangard')+'</div><h3></h3>'+(p.size?'<div class="meta">'+p.size+'</div>':'')+
+      '<div class="row"><div>'+pr+'</div><div class="left">'+(p.stock<=5?'залишилось '+p.stock+' шт':'')+'</div></div>'+
+      '<button class="btn" '+(left<=0?'disabled':'')+'>'+(left<=0?'Максимум у кошику':'Додати')+'</button>';
+    el.querySelector("h3").textContent=p.name;
+    el.querySelector("button").onclick=function(){add(p.id,1)};
+    g.appendChild(el);
+  });
+}
+
+/* --- cart --- */
+function byId(id){return PRODUCTS.filter(function(p){return p.id==id})[0]}
+function add(id,d){
+  var p=byId(id);if(!p)return;var q=(cart[id]||0)+d;
+  if(q<=0)delete cart[id];else if(q<=p.stock)cart[id]=q;
+  store("av_cart",JSON.stringify(cart));render();updateBar();drawLines();
+}
+function totals(){
+  var sum=0,cnt=0;Object.keys(cart).forEach(function(id){var p=byId(id);if(p){sum+=p.price*cart[id];cnt+=cart[id];}});
+  var disc=Math.round(sum*discount/100);return{sum:sum,cnt:cnt,disc:disc,total:sum-disc};
+}
+function updateBar(){
+  var t=totals(),bar=$("cartBar");bar.style.display=t.cnt?"flex":"none";
+  $("barText").textContent="У кошику "+t.cnt+" шт, "+money(t.total);
+}
+function drawLines(){
+  var L=$("lines");L.innerHTML="";
+  Object.keys(cart).forEach(function(id){
+    var p=byId(id);if(!p)return;
+    var d=document.createElement("div");d.className="line";
+    d.innerHTML='<div style="flex:1"></div><div class="qty"><button>-</button><span>'+cart[id]+'</span><button>+</button></div><div style="min-width:64px;text-align:right">'+money(p.price*cart[id])+'</div>';
+    d.firstChild.textContent=p.name;
+    var b=d.querySelectorAll("button");b[0].onclick=function(){add(id,-1)};b[1].onclick=function(){add(id,1)};
+    L.appendChild(d);
+  });
+  var t=totals();
+  $("tot").innerHTML='<div><span>Сума</span><span>'+money(t.sum)+'</span></div>'+
+    (discount?'<div><span>Знижка '+discount+'%</span><span>-'+money(t.disc)+'</span></div>':'')+
+    '<div class="big"><span>До сплати</span><span>'+money(t.total)+'</span></div>';
+  if(!t.cnt)$("drawer").style.display="none";
+}
+$("openCart").onclick=function(){drawLines();$("drawer").style.display="block"};
+$("closeCart").onclick=function(){$("drawer").style.display="none"};
+
+/* --- payment options --- */
+(function(){
+  var s=$("payment");s.innerHTML='<option value="cod">Накладений платіж (при отриманні)</option>';
+  if(CONFIG.bankPayment.enabled)s.innerHTML+='<option value="bank">'+CONFIG.bankPayment.label+'</option>';
+})();
+
+/* --- submit --- */
+$("form").addEventListener("submit",function(e){
+  e.preventDefault();
+  var f=e.target,m=$("msg"),t=totals();m.className="msg";
+  var data={name:f.name.value.trim(),phone:f.phone.value.trim(),city:f.city.value.trim(),branch:f.branch.value.trim(),payment:f.payment.value,comment:f.comment.value.trim()};
+  if(!t.cnt){m.className="msg err";m.textContent="Кошик порожній.";return}
+  if(!data.name||!data.phone||!data.city||!data.branch){m.className="msg err";m.textContent="Заповни ім'я, телефон, місто і відділення.";return}
+  if(data.phone.replace(/\D/g,"").length<10){m.className="msg err";m.textContent="Перевір номер телефону.";return}
+  if(!CONFIG.webhookUrl){m.className="msg err";m.textContent="Тестовий режим: замовлення нікуди не відправлено, бо не підключено вебхук.";return}
+  var payload={order:data,discountPercent:discount,items:Object.keys(cart).map(function(id){var p=byId(id);return{id:p.id,name:p.name,price:p.price,qty:cart[id]}}),sum:t.sum,discount:t.disc,total:t.total,createdAt:new Date().toISOString()};
+  $("submitBtn").disabled=true;m.textContent="Відправляю...";
+  fetch(CONFIG.webhookUrl,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)})
+    .then(function(r){if(!r.ok)throw 0;m.className="msg ok";m.textContent="Дякуємо! Замовлення прийнято, з тобою зв'яжуться для підтвердження.";cart={};store("av_cart","{}");updateBar();render();drawLines();f.reset();})
+    .catch(function(){m.className="msg err";m.textContent="Не вдалося відправити. Спробуй ще раз"+(CONFIG.telegram?" або напиши нам у Telegram.":".");})
+    .then(function(){$("submitBtn").disabled=false});
+});
+
+/* --- garland --- */
+(function(){
+  var svg=document.getElementById("garland"),NS="http://www.w3.org/2000/svg";
+  function el(n,a){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);return e}
+  function build(){
+    var W=svg.parentNode.clientWidth||390;svg.setAttribute("viewBox","0 0 "+W+" 96");svg.innerHTML="";
+    var defs=el("defs",{});
+    [["g1","#f3e6c4","#c9a24d"],["g2","#e9a0a8","#8f1d2c"],["g3","#7fd1c7","#0f4b47"]].forEach(function(c){
+      var g=el("radialGradient",{id:c[0],cx:".35",cy:".3",r:".8"});
+      g.appendChild(el("stop",{offset:"0","stop-color":c[1]}));g.appendChild(el("stop",{offset:"1","stop-color":c[2]}));defs.appendChild(g)});
+    svg.appendChild(defs);
+    var n=Math.max(3,Math.round(W/150)),sw=W/n,dy=22,pts=[];
+    for(var i=0;i<n;i++){
+      var x0=i*sw,x1=x0+sw,d="M"+x0+" 6 Q"+(x0+sw/2)+" "+(6+dy*2)+" "+x1+" 6";
+      svg.appendChild(el("path",{d:d,fill:"none",stroke:"#c9a24d","stroke-width":"1.2","stroke-opacity":".8"}));
+      for(var k=1;k<6;k++){var u=k/6,x=(1-u)*(1-u)*x0+2*(1-u)*u*(x0+sw/2)+u*u*x1,y=(1-u)*(1-u)*6+2*(1-u)*u*(6+dy*2)+u*u*6;pts.push([x,y,k])}
+    }
+    pts.forEach(function(p,i){
+      var lt=el("circle",{cx:p[0],cy:p[1]+3,r:"2.6",fill:i%2?"#ffe9a8":"#fff6d6",class:"lt"});
+      lt.style.animationDelay=(i*0.55%3.6)+"s";svg.appendChild(el("circle",{cx:p[0],cy:p[1]+3,r:"5.5",fill:"#ffe9a8","fill-opacity":".16"}));svg.appendChild(lt)});
+    var gr=["g1","g2","g3","g1","g2"];
+    for(var j=0;j<n;j++){
+      var cx=j*sw+sw/2,top=6+dy,len=6+((j*13)%3)*7,r=8+((j*7)%3)*1.2,id=gr[j%gr.length];
+      svg.appendChild(el("line",{x1:cx,y1:top,x2:cx,y2:top+len,stroke:"#c9a24d","stroke-width":".8"}));
+      svg.appendChild(el("rect",{x:cx-2.5,y:top+len-1,width:5,height:4,rx:1,fill:"#c9a24d"}));
+      svg.appendChild(el("circle",{cx:cx,cy:top+len+3+r,r:r,fill:"url(#"+id+")"}));
+      svg.appendChild(el("circle",{cx:cx-r*.35,cy:top+len+3+r*.6,r:r*.18,fill:"#fff","fill-opacity":".7"}));
+    }
+  }
+  build();window.addEventListener("resize",build);
+})();
+
+/* --- hero + snow --- */
+$("heroBtn").onclick=function(){$("gift").scrollIntoView({behavior:"smooth"})};
+(function(){
+  if(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+  var cv=$("snow"),ctx=cv.getContext("2d"),W,H,fl=[];
+  function size(){var r=cv.parentNode.getBoundingClientRect();W=cv.width=r.width;H=cv.height=r.height}
+  size();window.addEventListener("resize",size);
+  for(var i=0;i<46;i++)fl.push({x:Math.random(),y:Math.random(),r:Math.random()*2.2+.6,s:Math.random()*.3+.22,d:Math.random()*6});
+  var t=0;(function loop(){t+=.004;ctx.clearRect(0,0,W,H);ctx.fillStyle="rgba(255,255,255,.75)";
+    fl.forEach(function(f){f.y+=f.s*0.45/H;if(f.y>1.02){f.y=-.02;f.x=Math.random()}
+      var x=f.x*W+Math.sin(t+f.d)*10;ctx.globalAlpha=.25+f.r/4;ctx.beginPath();ctx.arc(x,f.y*H,f.r,0,7);ctx.fill()});
+    requestAnimationFrame(loop)})();
+})();
+
+/* --- start --- */
+function start(){
+  try{cart=JSON.parse(store("av_cart")||"{}")}catch(e){cart={}}
+  Object.keys(cart).forEach(function(id){var p=byId(id);if(!p)delete cart[id];else if(cart[id]>p.stock)cart[id]=p.stock});
+  initGift();renderChips();render();updateBar();
+  if(CONFIG.telegram){var a=document.createElement("a");a.href=CONFIG.telegram;a.textContent="Є питання? Напиши в Telegram";a.style.cssText="display:block;margin-top:8px;color:#0f5c58";document.querySelector("footer").appendChild(a)}
+}
+if(CONFIG.productsUrl){fetch(CONFIG.productsUrl).then(function(r){return r.json()}).then(function(j){PRODUCTS=j}).catch(function(){}).then(start)}else start();
+</script>
+</body>
+</html>
